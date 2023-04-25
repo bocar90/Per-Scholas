@@ -1,4 +1,6 @@
 package pa_303_4_1;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class CondStatements {
@@ -142,25 +144,75 @@ public class CondStatements {
 
 	static void incomeTax() {
 		System.out.println("**** Question #7 ****");
+		
+		// Create a new Locale
+		Locale usa = new Locale("en", "US");
+		// Create a formatter given the Locale
+		NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
+		
 		System.out.print("Enter your filing status: ");
 		sc.nextLine();
 		String status = sc.nextLine();
-		int tax = 0;
+		double tax = 0;
 		System.out.print("Enter your income: ");
-		int income = sc.nextInt();	
-		System.out.println("Filing status: " + status);
-		System.out.println("Income: " + income);
+		double income = sc.nextDouble();	
+		
 		if(status.equalsIgnoreCase("single")) {
 			if(income <= 8350)
-				tax = income * 10/100;
+				tax = income * 0.1;
+			else if(income >= 8351 && income <= 33950)
+				tax = income * 0.15;
+			else if(income >= 33951 && income <= 82250)
+				tax = income * 0.25;
+			else if(income >= 82251 && income <= 171550)
+				tax = income * 0.28;
+			else if(income >= 171551 && income <= 372950)
+				tax = income * 0.33;
+			else
+				tax = income * 0.35;
 		}else if(status.equalsIgnoreCase("married filing jointly") || status.equalsIgnoreCase("qualifying widow(er)")) {
-			
+			if(income <= 16700)
+				tax = income * 0.1;
+			else if(income >= 16701 && income <= 67900)
+				tax = income * 0.15;
+			else if(income >= 67901 && income <= 137050)
+				tax = income * 0.25;
+			else if(income >= 137051 && income <= 208850)
+				tax = income * 0.28;
+			else if(income >= 208851 && income <= 372950)
+				tax = income * 0.33;
+			else
+				tax = income * 0.35;
 		} else if(status.equalsIgnoreCase("married filing separately")) {
-			
+			if(income <= 8350)
+				tax = income * 0.1;
+			else if(income >= 8351 && income <= 33950)
+				tax = income * 0.15;
+			else if(income >= 33951 && income <= 68525)
+				tax = income * 0.25;
+			else if(income >= 68526 && income <= 104425)
+				tax = income * 0.28;
+			else if(income >= 104426 && income <= 186475)
+				tax = income * 0.33;
+			else
+				tax = income * 0.35;
 		}else if(status.equalsIgnoreCase("head of household")) {
-			
+			if(income <= 11950)
+				tax = income * 0.1;
+			else if(income >= 11951 && income <= 45500)
+				tax = income * 0.15;
+			else if(income >= 45501 && income <= 68525)
+				tax = income * 0.25;
+			else if(income >= 68526 && income <= 117450)
+				tax = income * 0.28;
+			else if(income >= 117451 && income <= 190200)
+				tax = income * 0.33;
+			else
+				tax = income * 0.35;
 		} else
 			System.out.println("Status not found!");
+		
+		System.out.println("Tax = " + dollarFormat.format(tax));
 			
 	}
 }
