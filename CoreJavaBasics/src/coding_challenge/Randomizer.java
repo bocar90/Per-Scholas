@@ -30,6 +30,7 @@ public class Randomizer {
 		
 		System.out.println("Orignal array: " + Arrays.toString(names));
 		System.out.println("Random array:  " + Arrays.toString(randString));
+		
 	}
 
 }
