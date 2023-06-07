@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register-Result</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+<h2>Register-Result</h2>
+<div class="my-3">
+    <p><strong>First Name:</strong> <span th:text="${register.firstName}"></span></p>
+    <p><strong>Last Name:</strong> <span th:text="${register.lastName}"></span></p>
+    <p><strong>Username:</strong> <span th:text="${register.username}"></span></p>
+    <p><strong>Password:</strong> <span th:text="${register.password}"></span></p>
+    <p><strong>City:</strong> <span th:text="${register.city}"></span></p>
+    <p><strong>State:</strong> <span th:text="${register.state}"></span></p>
+    <p><strong>Zip Code:</strong> <span th:text="${register.zipcode}"></span></p>
+</div>
+<a th:href="@{/login}">Login</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
