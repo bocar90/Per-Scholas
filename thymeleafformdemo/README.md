@@ -1,3 +1,1 @@
-<img src='https://i.imgur.com/NP1J3T3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<img src='https://express.adobe.com/tools/convert-to-gif'>
+<img src='http://g.recordit.co/sxrNa0i9bl.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
