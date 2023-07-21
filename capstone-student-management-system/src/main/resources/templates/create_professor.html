@@ -24,7 +24,7 @@
 		          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            <li><a class="dropdown-item" th:href="@{/students/new}">New Student</a></li>
 		            <li><a class="dropdown-item" th:href="@{/students/new}">New Professor</a></li>
-		            <li><a class="dropdown-item" href="#">New Course</a></li>
+		            <li><a class="dropdown-item" th:href="@{/courses/new}">New Course</a></li>
 		          </ul>
 	        </li>
             <li class="nav-item">
@@ -62,8 +62,8 @@
 							<input class="form-control" type="text" name="address" th:field="*{address}" placeholder="Enter Professor Address" required>
 						</div>
 						<div class="form-group">
-							<label>Course</label>
-							<input class="form-control" type="text" name="course" th:field="*{course}" placeholder="Enter Professor Address" required>
+							<label>Course_id</label>
+							<input class="form-control" type="text" name="course" th:field="*{course}" placeholder="Enter Professor Course_id" required>
 						</div>
 						<div class="box-footer d-grid gap-2 col-6 mx-auto">
 							<button class="btn btn-dark mt-4" type="submit"> Submit</button>

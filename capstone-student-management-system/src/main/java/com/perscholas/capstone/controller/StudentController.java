@@ -31,13 +31,6 @@ public class StudentController {
 		model.addAttribute("user",user);
 		return "login";
 	}
-
-	@GetMapping("/signup")
-	public String signupPage(Model model) {
-		User user = new User();
-		model.addAttribute("user", user);
-		return "signup";
-	}
 	
 	@GetMapping("/about")
 	public String aboutPage() {
@@ -80,6 +73,7 @@ public class StudentController {
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
 		existingStudent.setAddress(student.getAddress());
+		existingStudent.setCourse(student.getCourse());
 		
 		//Save updated student object to database
 		studentService.updateStudent(existingStudent);

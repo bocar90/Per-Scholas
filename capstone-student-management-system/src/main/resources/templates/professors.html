@@ -36,6 +36,8 @@
       </div>
   	</nav>
 
+<!--  	<p th:text="${professors[1].course.getId}"></p> -->
+
 	<div class="container">
 		<div class="row">
 			<h1 style="color: aliceblue;">List Professors</h1>
@@ -62,7 +64,7 @@
 		      <td th:text = "${professor.lastName}"> </td>
 		      <td th:text = "${professor.email}"> </td>
 		      <td th:text = "${professor.address}"> </td>
-		      <td th:text = "${professor.course}"> </td>
+		      <td th:text = "${professor.check}"> </td>
 		      <td>
 		      	<a th:href="@{/professors/edit/{id}(id=${professor.id})}" class="btn btn-dark">
 		      		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
