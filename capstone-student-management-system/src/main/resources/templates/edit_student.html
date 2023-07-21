@@ -19,9 +19,14 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" th:href="@{/students}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" th:href="@{/students/new}">Services</a>
-            </li>
+			<li class="nav-item dropdown">
+		    	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+		        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+		        	<li><a class="dropdown-item" th:href="@{/students/new}">New Student</a></li>
+		            <li><a class="dropdown-item" th:href="@{/professors/new}">New Professor</a></li>
+		            <li><a class="dropdown-item" th:href="@{/courses/new}">New Course</a></li>
+		          </ul>
+	        </li>
             <li class="nav-item">
               <a class="nav-link" th:href="@{/about}">About</a>
             </li>

@@ -1,7 +1,6 @@
 package com.perscholas.capstone.service;
 
 import java.util.List;
-
 import com.perscholas.capstone.model.Student;
 
 public interface StudentService {
